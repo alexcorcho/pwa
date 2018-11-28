@@ -9,6 +9,7 @@ body{overflow: hidden; background-color: #01579b; }
     .row{text-align: center; }
     .input{width: 60%; margin: auto;}
     #boton{margin: 400px}
+    body { font-size: 14px; }
     
 }
 
