@@ -18,7 +18,10 @@
   <link rel="apple-touch-startup-image" href="./logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="./style.css">
-  <link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="./manifest.json">
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  
+<script src="./jsmaterial/auth.js"></script>
   
 
 </head>
@@ -29,16 +32,16 @@
         <img id="logo" src="img/logo1.png" alt=""> 
         <h4 class="white-text" >Ingresa a tu cuenta</h4>
         <div class="input">
-                <input  type="text" placeholder="Usuario">
-                <input type="password" placeholder="Contraseña">
-                <a href="dashboard.html" class="waves-effect waves-light btn">Ingresar</a>
+                <input id="usuario" type="text" placeholder="Usuario">
+                <input id="pass" type="password" placeholder="Contraseña">
+                <a onclick="login()"  class="waves-effect waves-light btn">Ingresar</a>
                 <h6  class="white-text">¿Olvidaste tu contraseña?</h6>        
                 <h6  class="white-text" >¿Aún no tienes una cuenta? <a href="#registro" class="blue-text modal-trigger">CREAR CUENTA</a> </h6>
                 <div id="registro" class="modal modal-fixed-footer">
                         <div class="modal-content">
                           <h4>Registrarme </h4>
                           <input  type="text" placeholder="Usuario">
-                            <input type="password" placeholder="Contraseña">
+                            <input  type="password" placeholder="Contraseña">
                         </div>
                         <div class="modal-footer">
                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
