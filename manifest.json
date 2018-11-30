@@ -3,7 +3,7 @@
   "short_name": "App Club",
   "description": "Bienvenid@s a App Club, Aplicacion para administrar clubes deportivos",
   "background_color": "#2B2B2B",
-  "theme_color": "#01579b",
+  "theme_color": "#01579b", 
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./?utm_source=web_app_manifest",
