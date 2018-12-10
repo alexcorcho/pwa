@@ -16,12 +16,15 @@
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
    <script src="./jsmaterial/salir.js"></script>
+ 
 
-    
+   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+   <script src="./jsmaterial/crud.js"></script>
  
 </head>
 <body>
-        <div class="baner red">
+          <div class="baner red">
                 <nav>
                   <div class="nav-wrapper ">
                     <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
@@ -33,6 +36,15 @@
                     </ul>
                   </div>
                 </nav>
+
+                
+
+                
+
+               
+                
+
+
                 <div class="tarjetas">
                     <nav class="nav-extended">
                         
@@ -49,6 +61,8 @@
                      
                  </div>
               </div>
+
+              
    
         <section>
                 <a id="boton" href="#" data-target="slide-menu" class="sidenav-trigger"><i class=" material-icons">menu</i></a>
@@ -76,41 +90,49 @@
         </section>
     
     <!-- fin Nav-->
-    <ul class="collection">
-            <li class="collection-item avatar">
-              <img src="./img/perfil.jpg" alt="" class="circle">
-              <span class="title">Luis Carlos Mosquera</span>
-              <p>Medellin <br>
-                 Profesor:Humberto
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-                <img src="./img/perfil.jpg" alt="" class="circle">
-              <span class="title">Jarles Andres Rojas</span>
-              <p>Apartadó <br>
-                 Profesor: Alex Montiel
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-                    <img src="./img/perfil.jpg" alt="" class="circle">
-              <span class="title">Alexander Corcho</span>
-              <p>Apartadó <br>
-                 Profesor:Robinson Posada
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-                    <img src="./img/perfil.jpg" alt="" class="circle">
-              <span class="title">Flanco Escamilla</span>
-              <p>Mexico <br>
-                 Dios:El escorpion dorado
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-          </ul>
+    
+    <table >
+      <thead>
+        <tr>        
+        <th scope="col" >Nombre</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Profesor</th>
+      </tr>
+      </thead>
+      <tbody id="tabla">
+       
+       
+      </tbody>
 
+    </table>
+
+    <div id="agregar" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Nuevo Alumno </h4>
+        <input type="text" id="nombre" placeholder="nombre Completo">
+         <input type="text" id="ciudad" placeholder="ciudad">
+        <input type="text" id="profesor" placeholder="profesor">
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <a onclick="guardar()" class="modal-close waves-effect waves-green btn-flat">Guardar</a>
+
+      </div>
+    </div>
+
+    <a href="#agregar" class="blue-text modal-trigger">CREAR CUENTA</a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         
+ 
+         <script>
+           $(document).ready(function(){
+      $('.modal').modal();
+           });
+         
+          </script>
 
 
 </body>
