@@ -13,7 +13,12 @@ var config = {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // Usuario a ingresado
-     
+
+      
+      console.log(user);
+      document.getElementById('email').innerHTML = user.email;
+      document.getElementById('nombre').innerHTML = user.uid;
+
       
     } else {
       window.open("index.html","_self");
@@ -29,3 +34,6 @@ var config = {
       console.error('Sign Out Error', error);
     });
   }
+
+
+  console.log(user);

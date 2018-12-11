@@ -13,6 +13,8 @@ firebase.initializeApp({
     let nombre = document.getElementById('nombre').value;
     let ciudad = document.getElementById('ciudad').value;
     let profesor = document.getElementById('profesor').value;
+    
+
 
     db.collection("usuarios").add({
         nombre: nombre,
@@ -38,27 +40,25 @@ firebase.initializeApp({
   //leer datos
     db.collection("usuarios").get().then((querySnapshot) => {    
        querySnapshot.forEach((doc) => {
+           //Pinta en html
         document.getElementById('tabla').innerHTML += `
-        
-        
-         <ul class="collection">
-        <li class="collection-item avatar">
-      <img src="img/perfil.jpg" alt="" class="circle">
-      <span class="title">${doc.data().nombre}</span>
-      <p>${doc.data().ciudad} <br>
-      ${doc.data().profesor}
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">edit</i></a>
-    </li>
-        </ul>
-        
-        
-        
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="img/perfil.jpg" alt="" class="circle">
+                    <span class="title">${doc.data().nombre}</span>
+                    <p>${doc.data().ciudad} <br>
+                     ${doc.data().profesor}
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">edit</i></a>
+                </li>
+            </ul>        
         
         `
         
     });
     });
 
+
+    
 
   

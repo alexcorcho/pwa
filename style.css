@@ -4,6 +4,8 @@ body{overflow: hidden; background-color: #01579b; }
 .input{width: 25%; margin: auto;}
 #boton{margin: 400px}
 
+
+
 @media screen and (max-width: 400px) {
     #logo{width: 25%; margin-top: 10vh;}
     .row{text-align: center; }
