@@ -38,11 +38,24 @@ firebase.initializeApp({
   //leer datos
     db.collection("usuarios").get().then((querySnapshot) => {    
        querySnapshot.forEach((doc) => {
-        document.getElementById('tabla').innerHTML += ` <tr>        
-        <td>${doc.data().nombre}</td>
-        <td>${doc.data().ciudad}</td>
-        <td>${doc.data().profesor}</td>
-        </tr>`
+        document.getElementById('tabla').innerHTML += `
+        
+        
+         <ul class="collection">
+        <li class="collection-item avatar">
+      <img src="img/perfil.jpg" alt="" class="circle">
+      <span class="title">${doc.data().nombre}</span>
+      <p>${doc.data().ciudad} <br>
+      ${doc.data().profesor}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">edit</i></a>
+    </li>
+        </ul>
+        
+        
+        
+        
+        `
         
     });
     });
